@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-pay-card"
+    }
+  },
+  "defaultProject": "app-pay-card",
+  "cli": {
+    "analytics": "9bbc4dba-7d2f-451e-983d-b9c573c11519"
+  }
 }
