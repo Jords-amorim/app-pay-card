@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PayService } from './pay.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({ 
   declarations: [
     AppComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

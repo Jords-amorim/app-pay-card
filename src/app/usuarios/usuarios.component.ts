@@ -7,31 +7,17 @@ import { PayService } from '../pay.service';
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.scss']
 })
-export class UsuariosComponent implements OnInit {
-  
-  constructor( private service: PayService) {
-  //   private usuarios: User [];
-  // lista (){
-   
-  //   this.service.search().subscribe(usuarios => {
-  //     console.log(usuarios[0].id)
-  //   })
 
-  }
+export class UsuariosComponent implements OnInit {
+
+  public persondata = [];
+  constructor( private service: PayService) { }
 
   ngOnInit(): void {
-    //console.log(this.service.User)
-    this.service.getData().subscribe((data) => {
-      console.log("Data", data);
+     this.service.getData().subscribe((data) => {
+       this.persondata = Array.from(Object.keys(data) , k=>data[k]);
+      console.log(this.persondata);     
 
     })
   }
-
 }
-
-// interface User {
-//   id: number;
-//   name: string;
-//   img: string;
-//   username: string;
-// }

@@ -1,5 +1,16 @@
-<!-- <div *ngFor ='let item  of User'>
-    <p>{{User.id}}</p>
-    
-    
-    </div> -->
+<h1 ngClass='title'>Lista de Usuários</h1>
+<!--  Diretiva *ngFor -->
+<div *ngFor='let item of persondata; let i =index '>
+    <!--  Container usuarios -->
+    <div ngClass='users'>
+        <img ngClass='img' src={{item.img}} alt="Imagem Usuário" />    
+        <h4>Nome do usuário: {{item.name}} </h4>   
+        <p>ID: {{item.id}} - Username: {{item.username}}</p>  
+        <!-- Botão Pagar recebe função openDialog -->
+        <button ngClass='button'(click)= "openDialog ()"> Pagar </button>      
+    </div>   
+</div>
+
+
+
+
