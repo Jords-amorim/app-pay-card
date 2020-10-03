@@ -1,7 +1,19 @@
-.container {
-    display: flex;
-    flex-direction: column;
+.Containermodal {
+   background: #ffffff;
+   display: flex;
+   margin-top: 5vw;
+   margin-left: 25%;
+   padding: 40px; 
+   width: 40vw;
+   height: 40vw;
+   justify-content: center;
+   align-items: center;
+  
  }
- .container > * {
-    width: 100%;
+ .titlemodal{
+   /* Text */    
+   background: #20223a;
+   color: white;
+   
  }
+ 

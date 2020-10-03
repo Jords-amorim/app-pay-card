@@ -1,15 +1,21 @@
 
-    <div>
-      <h2>Pagamento para Nome do Usuário</h2>
-      <form >      
-        <!-- <mat-form-field >
-            <mat-label></mat-label>
-           <input type="number" matImput placeholder = "R$ 0,00"> 
-        </mat-form-field>  -->
+    <!-- Importação variável displays -->
+    <div ngClass='Containermodal' [ngStyle] =" {'display': !showDisplay ? 'flex' : 'none' } "  >
+      <!-- Container Title Modal -->
+      <div ngClass="Titlemodal" >        
+        <h1>Pagamento para Nome do Usuário </h1>  
+      </div>
+      <div ngClass="ContainerForm" >        
+        <!-- Valor Descripton -->
+        <input type="number"placeholder='R$ 0,00'>
+        <!-- Card details -->
         <h3> Cartão com final ID Variável </h3>
-        </form>
-        <button >Pagar</button>
+        <!-- Button Modal -->
+        <button >Pagar</button> 
+      </div>
+      
     </div>
+  
     
    
     

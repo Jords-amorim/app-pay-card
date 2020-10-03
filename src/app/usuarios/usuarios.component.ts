@@ -11,7 +11,18 @@ import { PayService } from '../pay.service';
 export class UsuariosComponent implements OnInit {
 
   public persondata = [];
-  constructor( private service: PayService) { }
+  constructor( 
+    private service: PayService,
+    // Importação variável displays
+    public displays : PayService
+    ) { }
+
+  //  Creare function Show Bottun 
+  valorModal = true 
+  showNotFoundModal  (){
+    this.valorModal = !this.valorModal
+    this.displays.mudarValor(true) 
+  }
 
   ngOnInit(): void {
      this.service.getData().subscribe((data) => {
@@ -20,4 +31,5 @@ export class UsuariosComponent implements OnInit {
 
     })
   }
+  
 }

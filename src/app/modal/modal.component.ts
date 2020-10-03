@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PayService } from '../pay.service';
 
 @Component({
   selector: 'app-modal',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  
+  showDisplay:boolean
 
-  constructor() { }
+  constructor(
+    
+    public displays: PayService
+  ) {  }
+  
 
   ngOnInit(): void {
+    // this.displays.showNotFound.subscribe((valor) => {
+    //   this.showDisplay = valor
+    // })
   }
 
 }
