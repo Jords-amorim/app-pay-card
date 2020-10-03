@@ -1,4 +1,45 @@
-div{
-    display: flex;
-    align-items: center;
+/* Title user list  */
+.title {
+    font-size: 2.2vw; 
+    margin-left: 20%;
+}
+
+/* User cotainer*/
+.usercontainer { 
+    /* Fundos: */   
+    background: linear-gradient(90deg,#20223a 30%, #313257 80% ) ;
+    /* Text */    
+    color: white;
+    /* Positioning */
+    margin-bottom:  5px;
+    margin-left: 20%;
+    padding: 40px;  
+    width: 50vw;
+    height: 10%;  
+    display: flex;   
+    /* Childrens Organization */
+    justify-content: space-between;
+    align-items: center; 
+}
+
+/* User image*/ 
+.userimg {
+    border-radius: 50%;
+}
+/* ID e Username*/
+.user{  
+      
+     
+    font-size: 1.2vw; 
+    line-height: 2vw;
+    padding-left: 20px;
+    
+
+}
+/* Botão Pagar */
+.button  {      
+    margin-left: auto;
+    width: 100px;
+    font-size: 1.4vw; 
+    font-weight: bold;
 }
