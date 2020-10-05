@@ -1,6 +1,6 @@
 /* Title user list  */
 .title {
-    margin-left: 20%;
+    margin: 10px 30vw 5px;
 }
 
 /* User cotainer*/
@@ -10,26 +10,25 @@
     /* Text */    
     color: white;
     /* Positioning */
-    margin-bottom:  5px;
-    margin-left: 20%;
+    margin: 10px 30vw 5px;
     padding: 40px;  
-    width: 50vw;
-    height: 10%;  
+    width: 600px;
+    height: 100px;  
     display: flex;   
-    /* Childrens Organization */
+    /* Organização das Childrens */
     justify-content: space-between;
     align-items: center; 
 }
 
-/* User image*/ 
+/* Imagem Usuário*/ 
 .userimg {
     border-radius: 50%;
 }
 
 /* ID e Username*/
 .user{  
-    font-size: 1.2vw; 
-    line-height: 2vw;
+    // font-size: 1.2vw; 
+    line-height: 25px;
     padding-left: 20px;
 }
 
@@ -37,6 +36,6 @@
 .button  {      
     margin-left: auto;
     width: 100px;
-    font-size: 1.4vw; 
+    font-size: 20px; 
     font-weight: bold;
 }

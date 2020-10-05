@@ -17,9 +17,9 @@ export class ModalComponent implements OnInit {
   
 
   ngOnInit(): void {
-    // this.displays.showNotFound.subscribe((valor) => {
-    //   this.showDisplay = valor
-    // })
+    this.displays.showNotFound.subscribe((valor) => {
+      this.showDisplay = valor
+    })
   }
 
 }

@@ -1,19 +1,46 @@
+// Título Modal
+.titlemodal{
+  // Cor e forma
+  background:#525383;
+  color: white;
+  // Tamanho e Posicionamento
+  height: 40px;
+  padding: 20px;
+  margin-top: 0; 
+  text-align: initial;
+}
+
+.usermodal{
+  color: rgb(222, 226, 19);
+}
+
 .Containermodal {
-   background: #ffffff;
-   display: flex;
-   margin-top: 5vw;
-   margin-left: 25%;
-   padding: 40px; 
-   width: 40vw;
-   height: 40vw;
-   justify-content: center;
-   align-items: center;
+  // Cor e forma
+  border: solid 1px #FFFFFF24;
   
- }
- .titlemodal{
-   /* Text */    
-   background: #20223a;
-   color: white;
+  box-shadow: 0px 5px 10px #5538EE14; 
+  // Tamanho e Posicionamento
+  width: 500px;   
+  height: 300px;    
+  margin: 10px 35vw 5px;
+  text-align: center; 
    
- }
+   display: flex; 
+   flex-direction: column; 
+    
+ }  
+.valormodal{
+  font-size: 25px;
+  border-radius: 5px;
+  width: 400px;
+
+}
+button {
+margin-left: auto;
+width: 100px;
+font-size: 25px; 
+font-weight: bold;
+}
+
+
  

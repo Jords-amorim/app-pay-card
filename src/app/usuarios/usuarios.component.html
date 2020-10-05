@@ -9,7 +9,7 @@
          
     </div>   
     <!-- Botão Pagar recebe função showNotFoundModal -->
-    <button ngClass='button' (click)= "showNotFoundModal ()"> Pagar </button> 
+    <button ngClass='button' *ngIf='pagamento' (click)= "showNotFoundModal ()"> Pagar </button> 
 </div>
 
 

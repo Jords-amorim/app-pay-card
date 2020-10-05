@@ -1,48 +1,28 @@
 
-    <!-- Importação variável displays -->
+    <!-- Importação variável displays -->    
     <div ngClass='Containermodal' [ngStyle] =" {'display': !showDisplay ? 'flex' : 'none' } "  >
-      <!-- Container Title Modal -->
-      <div ngClass="Titlemodal" >        
-        <h1>Pagamento para Nome do Usuário </h1>  
-      </div>
+      <!-- Título Modal -->  
+      <h2 ngClass="titlemodal" >Pagamento para 
+        <span ngClass="usermodal" >Nome do Usuário</span>  </h2>  
       <div ngClass="ContainerForm" >        
-        <!-- Valor Descripton -->
-        <input type="number"placeholder='R$ 0,00'>
+        <!-- Descrição Valor -->
+        <input ngClass="valormodal" type="number"placeholder='R$ 0,00'>
         <!-- Card details -->
         <h3> Cartão com final ID Variável </h3>
         <!-- Button Modal -->
         <button >Pagar</button> 
       </div>
-      
     </div>
-  
-    
-   
-    
-   
 
+    <!------ Container Pagamento Concluiído ---------->
+    <!-- <div ngClass="containerrecibo">
+      <h2 ngClass="titlerecibo">Recibo de pagamento</h2>
+      <h2 >O Pagamento foi concluído com sucesso.</h2>  
+    </div> -->
 
-
-
-
-<!-- 
-
-Cartão com final 0123
-
-Pagar
-
-Modal de pagamento concluído com sucesso
-
-Recibo de pagamento
-
-O Pagamento foi concluído com sucesso.
-
-Modal de erro do pagamento
-
-Recibo de pagamento
-
-O pagamento não foi concluído com sucesso.  -->
-
-
-
+      <!------ Container ERRO Pagamento  ---------->
+      <!-- <div ngClass="containeerro">
+        <h2 ngClass="titleerro">Recibo de pagamento</h2>
+        <h2 >O Pagamento não foi concluído com sucesso.</h2>  
+      </div> -->
 
