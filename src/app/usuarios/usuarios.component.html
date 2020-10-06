@@ -7,9 +7,10 @@
             <span>ID: {{item.id}} - Username: {{item.username}}</span>
         </h4>   
          
-    </div>   
-    <!-- Botão Pagar recebe função showNotFoundModal -->
-    <button ngClass='button' *ngIf='pagamento' (click)= "showNotFoundModal ()"> Pagar </button> 
+    </div>  
+    
+    <!-- Botão Pagar  função OpenModal - diretiva *ngIF  -->
+    <button ngClass='button' (click)= "OpenModal()"> Pagar </button> 
 </div>
 
 

@@ -16,27 +16,22 @@ export class UsuariosComponent implements OnInit {
     // Importação variável displays
     public displays : PayService ) { }
     public persondata = [];
-   pagamento: boolean = true
-
+    // Variável 
+    mudarValor: boolean = true
+  // Função receve Array de usuários  
   ngOnInit(): void {
      this.service.getData().subscribe((data) => {
        this.persondata = Array.from(Object.keys(data) , k=>data[k]);
-      console.log(this.persondata);     
-
+      console.log(this.persondata);  
     })
   }
   
-  //  Creare function Show Bottun 
-  // valorModal = true 
-  // showNotFoundModal  (){
-  //   this.valorModal = !this.valorModal
-  //   this.displays.mudarValor(true) 
-  // }
-
-  showNotFoundModal(){
-    this.pagamento = false;
-    
-
+  // Função OpenModal ao clicar botão pagar 
+  valorModal = true 
+  OpenModal (){
+    // Mostra Modal
+    this.valorModal = !this.valorModal
+    // Fecha Modal
+    this.displays.mudarValor(this.valorModal) 
   }
-  
 }

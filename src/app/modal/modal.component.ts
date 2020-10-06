@@ -6,20 +6,15 @@ import { PayService } from '../pay.service';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
-  
+export class ModalComponent implements OnInit {  
+
   showDisplay:boolean
 
-  constructor(
-    
-    public displays: PayService
-  ) {  }
+  constructor(public displays: PayService) {  }
   
-
   ngOnInit(): void {
-    this.displays.showNotFound.subscribe((valor) => {
+    this.displays.showModal.subscribe((valor) => {
       this.showDisplay = valor
     })
   }
-
 }

@@ -8,30 +8,28 @@ import { Observable, Subject } from 'rxjs';
 })
 // Chamada Endoipoint método Get
 export class PayService { 
-  
-  showNotFound: Observable<boolean>    
-
-private apiurl = 'https://www.mocky.io/v2/5d531c4f2e0000620081ddce'
-
-  constructor(private http: HttpClient    
-    ) {
-    // this.showSubject = new Subject<boolean>();
-    // this.ShowNotFound = this.showSubject.asObservable();
-  } 
+  // Variáveis
+  private apiurl = 'https://www.mocky.io/v2/5d531c4f2e0000620081ddce'
+  showModal: Observable<boolean> 
   private showSubject: Subject<boolean>  
+  
+  constructor(private http: HttpClient) {
+    this.showSubject = new Subject<boolean>();
+    this.showModal = this.showSubject.asObservable();
+    this.showSubject.next(false);
+  } 
+  
   mudarValor(valor) {
     this.showSubject.next(valor)
     return valor
   } 
-
-  ShowNotFound(){
-    return this.showNotFound
+  // Retorna showModal
+  getshowModal(){
+    return this.showModal 
   }
-  
+  // Retorna APIURL
   getData() {
     return this.http.get(this.apiurl); 
   }
- 
-
   
 }  
