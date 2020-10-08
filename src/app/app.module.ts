@@ -8,6 +8,7 @@ import { PayService } from './pay.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
 
+
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { ModalComponent } from './modal/modal.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+   
   ],
   providers: [PayService],
   bootstrap: [AppComponent]
