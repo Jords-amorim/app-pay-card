@@ -3,7 +3,9 @@
     <div ngClass='Containermodal' [ngStyle] =" {'display': !showDisplay ? 'none' : 'flex' } "  >
       <!-- Título Modal -->  
       <h2 ngClass="titlemodal" >Pagamento para 
-        <span ngClass="usermodal" >Nome do Usuário</span>  </h2>  
+        <span ngClass="usermodal" > {{displays.getUsuarioSelecionado()}}  </span>  
+        <button (click)="closeModal()" ></button>
+      </h2>  
       <div ngClass="ContainerForm" >        
         <!-- Descrição Valor -->
         <input ngClass="valormodal" type="number"placeholder='R$ 0,00'>
@@ -11,6 +13,7 @@
         <h3> Cartão com final ID Variável </h3>
         <!-- Button Modal -->
         <button >Pagar</button> 
+        
       </div>
     </div>
 

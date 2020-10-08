@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PayService } from '../pay.service';
+
  
 
 @Component({
@@ -16,8 +17,10 @@ export class UsuariosComponent implements OnInit {
     // Importação variável displays
     public displays : PayService ) { }
     public persondata = [];
+        
     // Variável 
     mudarValor: boolean = true
+
   // Função receve Array de usuários  
   ngOnInit(): void {
      this.service.getData().subscribe((data) => {
@@ -28,10 +31,12 @@ export class UsuariosComponent implements OnInit {
   
   // Função OpenModal ao clicar botão pagar 
   valorModal = true 
-  OpenModal (){
+  OpenModal (item){
+    // Retorna usuário selecionado
+    // this.displays.getUsuarioSelecionado()
     // Mostra Modal
     this.valorModal = !this.valorModal
     // Fecha Modal
-    this.displays.mudarValor(this.valorModal) 
+    this.displays.mudarValor(this.valorModal, item) 
   }
 }

@@ -11,25 +11,44 @@ export class PayService {
   // Variáveis
   private apiurl = 'https://www.mocky.io/v2/5d531c4f2e0000620081ddce'
   showModal: Observable<boolean> 
-  private showSubject: Subject<boolean>  
+  private showSubject: Subject<boolean> 
+  usuario_Selecionado: any;
+    
+ 
   
-  constructor(private http: HttpClient) {
-    this.showSubject = new Subject<boolean>();
-    this.showModal = this.showSubject.asObservable();
-    this.showSubject.next(false);
-  } 
-  
-  mudarValor(valor) {
+  constructor(
+    private http: HttpClient   
+    ) {
+      this.showSubject = new Subject<boolean>();
+      this.showModal = this.showSubject.asObservable();
+      this.showSubject.next(false);
+      } 
+      
+  // Retorna APIURL
+  getData() {
+    return this.http.get(this.apiurl); 
+  }
+
+  // Passa valor para observable através do Next
+  mudarValor(valor, item) {
     this.showSubject.next(valor)
+    console.log("mudarvalor")
+    this.usuario_Selecionado = item.name
     return valor
   } 
   // Retorna showModal
   getshowModal(){
     return this.showModal 
   }
-  // Retorna APIURL
-  getData() {
-    return this.http.get(this.apiurl); 
+  
+  public getUsuarioSelecionado(){
+    return this.usuario_Selecionado;
   }
+
+  public setUsuarioSelecionado(selecionado){
+    return this.usuario_Selecionado = selecionado;
+  }
+
+ 
   
 }  
