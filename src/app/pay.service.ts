@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
 // Criar Interface Transaction 
-interface TransactionPayload{
+interface TransactionPayload {
   card_number: string,
   cvv: number,
   expired_date: string,
@@ -20,8 +20,8 @@ export class PayService {
   private apiurl = 'https://www.mocky.io/v2/5d531c4f2e0000620081ddce'
   showModal: Observable<boolean> 
   private showSubject: Subject<boolean> 
-  usuario_Selecionado: any;
-    
+  usuario_Selecionado: any
+  pay: TransactionPayload
  
   
   constructor(
@@ -58,19 +58,9 @@ export class PayService {
   }
 
   // Endpoint Pagamento - Método Transaction e post(angular)
-  paypoint(){
-    let endpoint = "https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989"
-
-    let pay: TransactionPayload = {
-      card_number: "1111111111111111",
-      cvv: 789,
-      expired_date: '01/18',
-      destination_user_id: 34,
-      value: 399.00,
-    }
+  paypoint(pay){
+    let endpoint = "https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989"  
+     
     return this.http.post("https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989", pay)
   }
-
- 
-  
 }  

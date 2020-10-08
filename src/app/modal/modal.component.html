@@ -7,10 +7,19 @@
         <button (click)="closeModal()" ></button>
       </h2>  
       <div ngClass="ContainerForm" > 
-        <!-- Descrição Valor -->
-        <input ngClass="valormodal" type="number"placeholder='R$ 0,00'>
+        <form>          
+          <!-- Descrição Valor -->
+          <input ngClass="valormodal" type="number"placeholder='R$ 0,00'>
+          <select name="" id="Card">
+              <option value="" >Cartão com final 0123</option>
+              <option value="">Cartão com final 1111</option>
+          </select>         
+
+         
+        </form>
+       
         <!-- Card details -->
-        <h3> Cartão com final ID Variável </h3>
+        <h3>   </h3>
         <!-- Button Modal -->
         <button >Pagar</button> 
         
