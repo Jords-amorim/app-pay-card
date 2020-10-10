@@ -6,22 +6,25 @@
         <span ngClass="usermodal" > {{displays.getUsuarioSelecionado()}}  </span>  
         <button (click)="closeModal()" ></button>
       </h2>  
-      <div ngClass="ContainerForm" > 
-        <form>          
+      <div ngClass="ContainerForm" >
           <!-- Descrição Valor -->
-          <input ngClass="valormodal" type="number"placeholder='R$ 0,00'>
-          <select name="" id="Card">
-              <option value="" >Cartão com final 0123</option>
-              <option value="">Cartão com final 1111</option>
-          </select>         
-
-         
-        </form>
-       
-        <!-- Card details -->
-        <h3>   </h3>
+          <input ngClass="valormodal" type="number" placeholder='R$ 0,00' [(ngModel)]="q" [ngModelOptions]="{standalone: true}" >
+             <!-- Card details -->
+             <div>
+               <label for="cardlist"></label>
+                  <select ngclass="itenselected" id="cardlist" [(ngModel)]="dadoscard" required  >
+                    <option *ngFor='let cardsel of cards; let i = index' [ngValue]="cardsel" >Cartão com final{{cardsel.card_number}}
+                    </option>
+                  </select>                
+             </div>    
         <!-- Button Modal -->
-        <button >Pagar</button> 
+              <div>
+                <button (click)="sendpay()"  >
+                  Pagar
+                </button>
+                
+              </div>
+       
         
       </div>
     </div>

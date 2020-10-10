@@ -7,7 +7,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PayService } from './pay.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
-
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({ 
   declarations: [
@@ -19,8 +19,8 @@ import { ModalComponent } from './modal/modal.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-   
+    HttpClientModule,
+    ReactiveFormsModule   
   ],
   providers: [PayService],
   bootstrap: [AppComponent]
