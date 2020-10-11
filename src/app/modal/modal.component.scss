@@ -21,25 +21,53 @@
   box-shadow: 0px 5px 10px #5538EE14; 
   // Tamanho e Posicionamento
   width: 500px;   
-  height: 300px;    
+      
   margin: 10px 35vw 5px;
   text-align: center; 
   display: flex; 
   flex-direction: column; 
-    
- }  
+  position: fixed;
+  top: 200px;
+  left: 0;
+ }
+ 
+ .modal {
+  background: #fff; 
+ 
+}
 .valormodal{
   font-size: 25px;
   border-radius: 5px;
   width: 400px;
+  margin-bottom: 10px;
+}
 
+.inputcard{
+  border-radius: 5px;
+  width: 400px;
+  font-size: 20px; 
+  padding: 0 8px;
 }
-button {
-margin-left: auto;
-width: 100px;
-font-size: 25px; 
-font-weight: bold;
+/*Cartão selecionado */
+.cardselected{
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 20px;
+  height: 48px;
+  margin-top: 10px;
 }
+
+.Containermodal > .modal > button {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 20px;
+  height: 35px;
+  padding: 0 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 
  

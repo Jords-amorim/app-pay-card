@@ -1,31 +1,26 @@
 
     <!-- Importação variável displays -->    
     <div ngClass='Containermodal' [ngStyle] =" {'display': !showDisplay ? 'none' : 'flex' } "  >
-      <!-- Título Modal -->  
-      <h2 ngClass="titlemodal" >Pagamento para 
-        <span ngClass="usermodal" > {{displays.getUsuarioSelecionado()}}  </span>  
+      <div ngClass="modal">
+         <!-- Título Modal -->  
+      <h2 class="titlemodal" >Pagamento para 
+        <span class="usermodal" > {{displays.getUsuarioSelecionado()}}  </span>  
         <button (click)="closeModal()" ></button>
       </h2>  
       <div ngClass="ContainerForm" >
           <!-- Descrição Valor -->
-          <input ngClass="valormodal" type="number" placeholder='R$ 0,00' [(ngModel)]="q" [ngModelOptions]="{standalone: true}" >
+          <input ngClass="valormodal" [(ngModel)]="q" (keyup)="maskSearch($event)" (keydown)="maskSearchDown($event)" type="text" placeholder='R$ 0,00'   >
              <!-- Card details -->
-             <div>
-               <label for="cardlist"></label>
-                  <select ngclass="itenselected" id="cardlist" [(ngModel)]="dadoscard" required  >
-                    <option *ngFor='let cardsel of cards; let i = index' [ngValue]="cardsel" >Cartão com final{{cardsel.card_number}}
-                    </option>
-                  </select>                
-             </div>    
-        <!-- Button Modal -->
-              <div>
-                <button (click)="sendpay()"  >
-                  Pagar
-                </button>
-                
-              </div>
-       
-        
+          <label for="cardlist"></label>
+            <select  ngClass="inputcard" id="cardlist" [(ngModel)]="dadoscard" required  >
+              <option ngClass="cardselected" *ngFor='let cardsel of cards; let i = index' [ngValue]="cardsel"  >Cartão {{cardsel.card_number}} 
+              </option>
+            </select> 
+      </div>
+      <!-- Button Modal -->      
+      <button ngClass="button" (click)="sendpay()"  >
+        Pagar
+      </button> 
       </div>
     </div>
 
